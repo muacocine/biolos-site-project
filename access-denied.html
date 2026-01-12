@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Indisponível - BIOLOS</title>
+    <link rel="stylesheet" href="theme.css">
+    <script src="theme.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .error-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .error-card {
+            background: var(--bg-secondary);
+            border: 2px solid #dc3545;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(220, 53, 69, 0.15);
+        }
+
+        .error-card h1 {
+            color: #dc3545;
+            font-size: 32px;
+            margin: 0 0 16px 0;
+        }
+
+        .error-card p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 12px 0;
+        }
+
+        .reason {
+            background: rgba(220, 53, 69, 0.1);
+            border-left: 4px solid #dc3545;
+            padding: 16px;
+            margin: 24px 0;
+            text-align: left;
+            border-radius: 8px;
+        }
+
+        .reason h3 {
+            color: #dc3545;
+            margin: 0 0 8px 0;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .reason p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-primary);
+        }
+
+        .info-box {
+            background: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .info-box h4 {
+            color: var(--accent-color);
+            margin: 0 0 8px 0;
+            font-size: 14px;
+        }
+
+        .info-box ul {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .info-box li {
+            margin-bottom: 6px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 12px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(56, 182, 255, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--border-color);
+        }
+
+        .status-badge {
+            display: inline-block;
+            background: #dc3545;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        @media (max-width: 600px) {
+            .error-card {
+                padding: 24px;
+            }
+
+            .error-card h1 {
+                font-size: 24px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-card">
+            <div class="error-icon">🚫</div>
+            <div class="status-badge">Acesso Bloqueado</div>
+            
+            <h1>Acesso Indisponível</h1>
+            <p>O seu acesso foi bloqueado por motivos de segurança.</p>
+
+            <div class="reason">
+                <h3>🔒 Razão do Bloqueio</h3>
+                <p>
+                    Detetámos que está a utilizar uma <strong>VPN, Proxy ou serviço de Data Center</strong>. 
+                    Por razões de segurança e proteção contra fraudes, o acesso a este site não é permitido através destes serviços.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h4>Por que bloqueamos VPNs e Proxies?</h4>
+                <ul>
+                    <li>Proteção contra fraudes e atividades maliciosas</li>
+                    <li>Conformidade com políticas de segurança</li>
+                    <li>Prevenção de acesso não autorizado</li>
+                    <li>Proteção de dados dos utilizadores</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h4>O que pode fazer:</h4>
+                <ul>
+                    <li>Desative a sua VPN ou Proxy</li>
+                    <li>Utilize a sua ligação direta à Internet</li>
+                    <li>Tente novamente após desativar o serviço</li>
+                    <li>Entre em contacto com o suporte se acredita que isto é um erro</li>
+                </ul>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="reloadPage()">Tentar Novamente</button>
+                <a href="mailto:support@biolos.com" class="btn btn-secondary">Contactar Suporte</a>
+            </div>
+
+            <div class="footer">
+                <p>
+                    <strong>BIOLOS Security System</strong> | Proteção Anti-VPN/Proxy Ativa<br>
+                    IP Detetado: <span id="userIP">Carregando...</span><br>
+                    Hora do Bloqueio: <span id="blockTime">Carregando...</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Obter informações do cliente
+        function loadClientInfo() {
+            // Simular obtenção do IP (em produção, viria do servidor)
+            const userIP = new URLSearchParams(window.location.search).get('ip') || 'Desconhecido';
+            const blockTime = new Date().toLocaleString('pt-PT');
+            
+            document.getElementById('userIP').textContent = userIP;
+            document.getElementById('blockTime').textContent = blockTime;
+        }
+
+        function reloadPage() {
+            window.location.href = 'index.html';
+        }
+
+        // Carregar informações ao abrir a página
+        window.addEventListener('load', loadClientInfo);
+    </script>
+</body>
+</html>
