@@ -1,0 +1,95 @@
+/* BIOLOS Theme System - Dark/Light Mode */
+
+:root {
+  /* Light Mode (Default) */
+  --bg-primary: #f0f1f5;
+  --bg-secondary: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --accent-color: #38b6ff;
+  --accent-dark: #2a9fd9;
+}
+
+/* Dark Mode */
+body[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --text-primary: #f0f1f5;
+  --text-secondary: #b0b0b0;
+  --border-color: #444444;
+  --accent-color: #38b6ff;
+  --accent-dark: #2a9fd9;
+}
+
+/* Light Mode Explicit */
+body[data-theme="light"] {
+  --bg-primary: #f0f1f5;
+  --bg-secondary: #ffffff;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --accent-color: #38b6ff;
+  --accent-dark: #2a9fd9;
+}
+
+/* Apply theme colors globally */
+body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Tables */
+table {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+td, th {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Text elements */
+p, span, div, h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary) !important;
+}
+
+/* Links */
+a {
+  color: var(--accent-color) !important;
+}
+
+a:hover {
+  color: var(--accent-dark) !important;
+}
+
+/* Buttons */
+button {
+  background-color: var(--accent-color) !important;
+  color: white !important;
+  border-color: var(--accent-dark) !important;
+}
+
+button:hover {
+  background-color: var(--accent-dark) !important;
+}
+
+/* Form elements */
+input, textarea, select {
+  background-color: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-color) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 3px rgba(56, 182, 255, 0.1) !important;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
