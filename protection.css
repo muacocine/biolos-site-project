@@ -1,0 +1,119 @@
+/**
+ * BIOLOS Protection Styles
+ * Estilos CSS para impedir seleção, cópia e download de conteúdo
+ */
+
+/* Bloquear seleção de texto em todo o documento */
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-drag: none;
+}
+
+/* Permitir seleção apenas em elementos específicos se necessário */
+p, span, div {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Bloquear drag de imagens */
+img {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+}
+
+/* Bloquear drag de links */
+a {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Bloquear seleção em inputs (se existirem) */
+input, textarea {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Desativar highlight ao clicar */
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Bloquear seleção de texto ao fazer duplo clique */
+html {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Remover outline de elementos focados */
+:focus {
+    outline: none;
+}
+
+/* Desativar cursor pointer em imagens */
+img {
+    cursor: not-allowed !important;
+}
+
+/* Proteção adicional para elementos específicos */
+.protected {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+}
+
+/* Bloquear seleção ao passar o rato */
+::selection {
+    background: transparent;
+    color: inherit;
+}
+
+::-moz-selection {
+    background: transparent;
+    color: inherit;
+}
+
+/* Bloquear highlight de links */
+a:active, a:focus {
+    outline: none;
+    background: transparent;
+}
+
+/* Bloquear interação com elementos */
+.no-interaction {
+    pointer-events: none;
+}
+
+/* Proteção de conteúdo crítico */
+.content-protected {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
